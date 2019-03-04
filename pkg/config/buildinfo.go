@@ -1,11 +1,13 @@
 package config
 
-import "fmt"
+import (
+	log "github.com/sirupsen/logrus"
+)
 
 var (
 	buildTime, gitRevision, gitBranch, version string
 )
 
 func PrintBuildInfo() {
-	fmt.Printf("Start domo-server: %s, %s, %s, %s\n", buildTime, gitRevision, gitBranch, version)
+	log.Printf("Start domo-server: %s, %s, %s, %s\n", buildTime, gitRevision, gitBranch, version)
 }
