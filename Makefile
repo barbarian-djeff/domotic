@@ -32,4 +32,4 @@ domo-server:
 
 for-raspberry-pi:
 	rm -rf bin/raspberry-pi/domo-server
-	GOOS=linux GOARCH=amd64 go build $(LDFLAGS) -v -i -o bin/raspberry-pi/domo-server ./cmd/domo-server
+	GOARM=7 GOARCH=arm GOOS=linux go build $(LDFLAGS) -v -i -o bin/raspberry-pi/domo-server ./cmd/domo-server
